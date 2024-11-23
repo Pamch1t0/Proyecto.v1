@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" href="Style-Register.css">
+</head>
+<body style="background-image: url('IMG/fondo4k.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat;">
+    <div class="Container-Register">
+        <div class="Register">
+            <h2>Regístrate ahora</h2>
+            <h3>Ingrese sus datos</h3>
+            
+            <div class="login-Register">
+                <input id="username" type="text" placeholder="username">
+                <input id="password" type="password" placeholder="password">
+                <p>Termine de ingresar los datos necesitados</p>
+                <button id="registerButton" type="button">Registrarse</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Selección de los elementos del DOM
+        const usernameInput = document.getElementById('username');
+        const passwordInput = document.getElementById('password');
+        const registerButton = document.getElementById('registerButton');
+
+        // Función para guardar los datos y redirigir
+        function saveUserData() {
+            const username = usernameInput.value.trim();
+            const password = passwordInput.value.trim();
+
+            if (username === '' || password === '') {
+                alert('Por favor, complete todos los campos.');
+                return;
+            }
+
+            // Guardar en localStorage
+            localStorage.setItem('username', username);
+            localStorage.setItem('password', password);
+
+            alert('Registro exitoso. Ahora será redirigido a la página de inicio de sesión.');
+            
+            // Redirigir a Login.html
+            window.location.href = 'Login.html';
+        }
+
+        // Asignar el evento click al botón de registro
+        registerButton.addEventListener('click', saveUserData);
+    </script>
+</body>
+</html>

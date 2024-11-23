@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="Style-Login.css">
+</head>
+<body style="background-image: url('IMG/fondo4k.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat;">
+    <div class="container-login">
+        <div class="login-card">
+            <h2>Inicio de sesión</h2>
+            <h3>Ingrese los datos</h3>
+    
+            <form class="login-form" onsubmit="return handleLogin(event)">
+                <input id="loginUsername" type="text" placeholder="username" />
+                <input id="loginPassword" type="password" placeholder="password" />
+                <p>No tienes una cuenta <a href="Register.html">registrarse</a></p>
+                <center>
+                    <button type="submit">Iniciar sesión</button>
+                </center>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        // Función para manejar el inicio de sesión
+        function handleLogin(event) {
+            event.preventDefault(); // Evitar el envío del formulario
+
+            const username = document.getElementById('loginUsername').value.trim();
+            const password = document.getElementById('loginPassword').value.trim();
+
+            // Recuperar las credenciales almacenadas
+            const storedUsername = localStorage.getItem('username');
+            const storedPassword = localStorage.getItem('password');
+
+            // Validar credenciales
+            if (username === storedUsername && password === storedPassword) {
+            
+                // Redirigir a Lepe.html
+                window.location.href = 'Menu.html ';
+            } else {
+                alert('Credenciales incorrectas. Intente de nuevo.');
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,130 @@
+
+* {
+    box-sizing: border-box;
+}
+html,
+body,
+.wrapper {
+    height: 100%;
+    
+}
+
+.body {
+    display: grid;
+    place-items: center;
+    margin: 0;
+    padding: 0 24px;
+    font-family: "ubuntu";
+}
+
+.Container-Register {
+    position: absolute;
+    transform: translate( -50%, -50%);
+    top: 50%;
+    left: 50%;
+    width: 400px;
+    height: 440px;
+    border-radius: 10px;
+    padding: 0em;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.Register {
+    text-align: center;
+    position: relative;
+    z-index: 3;
+    width: 100%;
+    margin: 0 20px;
+    padding: 70px 30px 44px;
+    border-radius: 1.25rem;
+}
+
+.Register h2 {
+    position: relative;
+    font-size: 36px;
+    font-weight: 600;
+    margin: 0 0 12px;
+}
+
+.Register h3 {
+    position: relative;
+    color: #8c5ec8;
+    margin: 0 0 30px; 
+    font-weight: 500;
+    font-size: 1rem; 
+}
+
+.login-Register p {
+    margin: 0 0 30px; 
+    font-weight: 500;
+    font-size: 1rem; 
+    padding: 0 10px;
+    font-family: "ubuntu";
+}
+
+.login-Register  {
+    box-sizing: border-box;
+    width: 100%;
+    margin: 0;
+    display: grid;
+    gap: 4px
+}
+
+.login-Register input,
+.login-Register button {
+    width: 100%;
+    height: 40px;
+    text-align: center;
+}
+
+.login-Register input {
+    border: 2px solid #ebebeb;
+    font-family: inherit;
+    font-size: 20px;
+    padding: 0 25px;
+    border-radius: 14px;
+    transition: all 0.375s;
+}
+
+.login-Register input:hover {
+    border: 2px solid #8c5ec896;
+}
+
+.login-Register button {
+    cursor: pointer;
+    width: 100%;
+    height: 40px;
+    padding: 12px;
+    border-radius: 25px;
+    background-color: #af5ec896;
+    color: white;
+    border: 0;
+    font-family: inherit;
+    font-size: 1rem;
+    font-weight: 600;
+    text-align: center;
+    letter-spacing: 1px;
+    transition: all 0.3s;
+}
+
+.login-Register button:hover {
+    background-color: #8c5ec7;
+}
+
+@keyframes rotate {
+    100% {
+        background-position: 15% 50%;
+    }
+}
+
+@media (width >=500px) {
+    body{
+        .Register {
+            margin: 0;
+    
+        }
+    }
+}
